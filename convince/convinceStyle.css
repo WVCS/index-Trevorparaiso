@@ -28,6 +28,11 @@ li a:hover{
   font-size: 150%;
 }
 
+li.right{
+  float: right;
+}
+
+
 body{
   background-color: powderblue;
 }
