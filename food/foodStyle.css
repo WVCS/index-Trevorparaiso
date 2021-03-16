@@ -1,5 +1,5 @@
 body{
-background-color: snow;
+background-color: darkgray;
 }
 
  ul.nav {
@@ -28,4 +28,69 @@ a{
 li a:hover{
   background-color: lightslategray;
   font-size: 150%;
+}
+
+ ul.food {
+  list-style-type: none;
+  position: fixed;
+  width: 100%;
+   top: 0;
+   left: 0;
+  background-color: #3f37c9;
+}
+
+li.food {
+  display: inline;
+  padding: 10px;
+  margin: 50px;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px black;
+}
+a{
+   float: left;
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+  font-size: 130%;
+}
+
+li a:hover{
+  background-color: darkgray;
+  font-size: 175%;
+}
+
+.topjump{
+  position: sticky;
+  bottom: 0;
+  left: 90%;
+  background-color: #3f37c9;
+  border: 2px #3f37c9;
+  height: 5%;
+  width: 15%;
+}
+
+h2{
+  background-color: snow;
+  width: 8%;
+  font-size: 150%;
+  color: #3f37c9;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px darkgray;
+}
+
+h3{
+  background-color: snow;
+  width: 8%;
+  font-size: 150%;
+    color: #3f37c9;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px darkgray;
+} 
+h4{
+  background-color: snow;
+  width: 8%;
+  font-size: 150%;
+   color: #3f37c9;
+  letter-spacing: 3px;
+  text-shadow: 1px 2px darkgray; 
 }
