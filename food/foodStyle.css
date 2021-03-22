@@ -68,3 +68,62 @@ h4{
   letter-spacing: 3px;
   text-shadow: 1px 2px darkgray; 
 }
+
+body {
+  margin: 10%;
+  background-color: darkgray;
+}
+
+.grid {
+		display: grid;
+  grid-gap: 1%;
+		grid-template-columns: [col1-start] 30%  [col2-start] 30%   [col3-start] 30% [col3-end];
+		grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+		color: #3f37c9;
+  width: 90%;
+  margin-left: 10%; 
+margin-right:auto;
+	}
+
+	.box {
+		background-color: #3f37c9;
+		border-radius: 2%;
+		padding: 5%;
+	}
+
+	.a {
+		grid-column: col1-start / col3-start;
+		grid-row: row1-start ;
+	}
+	.b {
+		grid-column: col3-start ;
+		grid-row: row1-start / row2-end;
+	}
+	.c {
+		grid-column: col1-start;
+		grid-row: row2-start ;
+	}
+	.d {
+		grid-column: col2-start ;
+		grid-row: row2-start ;
+	}
+
+able, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: 10%; 
+margin-right:auto;
+}
+
+td{
+  text-align: center;
+}
+
+table{
+  background-color: #3f37c9;
+  color: snow;
+}
