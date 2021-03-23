@@ -69,19 +69,15 @@ h4{
   text-shadow: 1px 2px darkgray; 
 }
 
-body {
-  margin: 10%;
-  background-color: darkgray;
-}
 
 .grid {
-		display: grid;
-  grid-gap: 1%;
-		grid-template-columns: [col1-start] 30%  [col2-start] 30%   [col3-start] 30% [col3-end];
-		grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
-		color: #3f37c9;
-  width: 90%;
-  margin-left: 10%; 
+display: grid;
+grid-gap: 1%;
+grid-template-columns: [col1-start] 30%  [col2-start] 30%   [col3-start] 30% [col3-end];
+grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+color: #3f37c9;
+width: 90%;
+margin-left: 10%; 
 margin-right:auto;
 	}
 
