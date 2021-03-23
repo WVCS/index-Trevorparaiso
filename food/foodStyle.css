@@ -115,3 +115,14 @@ table{
   background-color: #3f37c9;
   color: snow;
 }
+
+.homegrid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 1%;
+  color: snow;
+   width: 90%;
+  margin-left: 10%; 
+margin-right:auto;
+}
+
