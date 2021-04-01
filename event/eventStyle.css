@@ -1,1 +1,138 @@
+body{
+  background-color: tan;
+}
 
+ul.nav {
+list-style-type: none;
+  left:0;
+  margin: 0;
+  padding: 0;
+  background-color: gold;
+  border: solid saddlebrown 3px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li.nav {
+  display: inline;
+  padding: 2%;
+  margin: 4%;
+}
+
+a{
+  float: left;
+  text-decoration: none;
+  color: saddlebrown;
+  padding: 14px 16px;
+  font-size: 140%;
+  text-shadow: 1px 1px white;
+}
+
+li a:hover{
+  background-color: lightyellow;
+  font-size: 150%;
+}
+
+
+.grid {
+		display: grid;
+  grid-gap: 1%;
+		grid-template-columns: [col1-start] 30%  [col2-start] 30%   [col3-start] 30% [col3-end];
+		grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+		color: saddlebrown;
+  width: 90%;
+  margin-left: 10%; 
+margin-right:auto;
+	}
+
+	.box {
+		background-color: lightyellow;
+		border-radius: 2%;
+    border: solid gold 2px;
+		padding: 5%;
+	}
+
+	.a {
+		grid-column: col1-start / col3-start;
+		grid-row: row1-start ;
+    text-shadow: 1px 2px gold;
+	}
+	.b {
+		grid-column: col3-start ;
+		grid-row: row1-start / row2-end;
+     text-shadow: 1px 1px gold;
+    overflow: none;
+	}
+	.c {
+		grid-column: col1-start;
+		grid-row: row2-start ;
+    text-shadow: 1px 1px gold;
+	}
+	.d {
+		grid-column: col2-start ;
+		grid-row: row2-start ;
+    text-shadow: 1px 1px gold;
+	}
+
+
+p{
+  color: saddlebrown;
+  font-size: 120%;
+  text-shadow: 1px 1px gold;
+}
+
+.homegrid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 1%;
+  color: snow;
+   width: 90%;
+  margin-left: 10%; 
+margin-right:auto;
+   overflow: none;
+}
+
+h1{
+  color:saddlebrown;
+  text-shadow: 1px 2px white;
+  background-color: gold;
+  border: solid saddlebrown 3px;
+}
+
+table{
+border-collapse: collapse;
+  width: 50%;
+  margin-left: 25%; 
+margin-right:auto;
+  background-color: gold;
+}
+
+table, th {
+  border: 3px solid white;
+}
+
+h2 a:hover{
+  background-color: lightyellow;
+  font-size: 130%;
+}
+
+.topjump{
+  position: sticky;
+  bottom: 0;
+  left: 90%;
+  background-color: saddlebrown;
+  color: gold;
+  text-shadow: 1px 2px white;
+  border: 2px #3f37c9;
+  height: 5%;
+  width: 15%;
+}
+
+@media only screen and (max-width: 768px) {
+  body{
+    background-color:#333
+  }
+  
+  
+}
