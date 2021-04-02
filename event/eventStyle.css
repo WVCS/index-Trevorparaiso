@@ -121,10 +121,10 @@ h2 a:hover{
   position: sticky;
   bottom: 0;
   left: 90%;
-  color: gold;
-  text-shadow: 1px 2px white;
-background-color: saddlebrown;
-  border: 2px lightyellow;
+  color: saddlebrown;
+  text-shadow: 1px 2px lightyellow;
+background-color: gold;
+  border: 2px saddlebrown;
   height: 10%;
   width: 12%;
 text-align: center;
