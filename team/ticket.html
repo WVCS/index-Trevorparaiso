@@ -1,8 +1,387 @@
 <html>
   
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="https://i.pinimg.com/originals/57/62/eb/5762eb3f605270d609679da595d6a105.jpg">
+  <title>Tickets</title>
+    
+  <style>  
+    body{
+  background-color: violet;
+  margin: 0 auto;
+}
+
+div.absolute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+a{
+  color: #552583;
+  text-shadow: 1px 1px white;
+  text-decoration: none;
+}
+
+li a:hover{
+  color: #fdb927;
+}
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  color: black;
+}
+
+html {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.header {
+  background-color:#552583;
+  color: #fdb927;
+  padding: 15px;
+  text-shadow: 1px 1px white;
+  text-align: right;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #fdb927;
+  color: #552583;
+  text-shadow: 1px 1px white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: mediumpurple;
+  color: #fdb927;
+}
+
+.aside {
+  background-color: #fdb927;
+  padding: 15px;
+  color: #552583;
+  text-shadow: 1px 1px white;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #552583;
+  color: #fdb927;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+dd{
+  color: white;
+}
+
+
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+* {box-sizing:border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fdb927;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.responsive{
+  max-width: 100%;
+  height: auto;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    
+    
+    
+    
+    </style>   
+</head>
+  
+  
+  
+  
   <body>
     
+   <div class="header">
+  <h2>'10</h2>
+</div>
+  
+ <div class="absolute">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Los_Angeles_Lakers_Wordmark_Logo_2001-current.png" width="325">
+</div> 
+  
+  
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li><a href="home.html"> Home</a></li>
+      <li><a href="schedule.html"> Schedule</a></li>
+      <li><a href="roster.html"> Roster</a></li>
+      <li><a href="store.html"> Store</a></li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h1>Tickets</h1>
+    <dl>
+  <dt>Brown Seating</dt>
+  <dd>- 75$ per ticket</dd>
+  <dt>Green Seating</dt>
+  <dd>- 95$ per ticket</dd>
+  <dt>Hyde Lounge</dt>
+  <dd>- 2,800$ - 6,000$ (dependent on Reg. Season or Playoff Game)</dd>
+   <dt>Blue Seating</dt>
+  <dd>- 155$ per ticket</dd>
+  <dt>Purple Seating</dt>
+  <dd>- 175$ per ticket</dd>
+  <dt>Dark Orange Seating</dt>
+  <dd>- 200$ per ticket</dd>
+  <dt>Light Orange Seating</dt>
+  <dd>- 215$ per ticket</dd>
+  <dt>Pink Seating</dt>
+  <dd>- 300$ per ticket</dd>
+  <dt>Courtside Seating</dt>
+  <dd>- 2,750$ per ticket</dd>
+</dl>
     
+    
+  </div>
+  
+  
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>Recent Scores</h2>
+      <h2>Game 7 - Jun 17, 2010</h2>
+      <p>83-79 (LAL wins 2010 NBA Finals 4-3)</p>
+      <h2>Game 6 - Jun 15, 2010</h2>
+      <p>89-67 (LAL)</p>
+      <h2> Game 5 - Jun 13, 2010</h2>
+      <p>92-86 (BOS) </p>
+    </div>
+  </div>
+</div>
+  
+  <div class="slideshow-container">
+
+ 
+  <div class="mySlides fade">
+    <center>
+    <img src="https://i.pinimg.com/originals/b9/42/f4/b942f4872e3f18fa79cd6d1ed8fb20e3.gif" style="width:100% height: auto" class="responsive">
+      </center>
+  </div>
+
+  <div class="mySlides fade">
+ <center>
+    <img src="https://live.staticflickr.com/45/138083721_fc8c86c3f3_b.jpg" style="width:100% height: auto" class="responsive">
+    </center>
+  </div>
+
+  <div class="mySlides fade">
+    <center>
+    <img src="https://theassociation.blogs.com/.a/6a00d8341c67fe53ef0120a8d6670d970b-pi" style="width:100% height: auto" class="responsive">
+    </center>
+  </div>
+
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+  
+
+<div class="footer">
+</div>  
+    
+    <script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    
+      
+      
+    </script>   
   </body>
   
   
