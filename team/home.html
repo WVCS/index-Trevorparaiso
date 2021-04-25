@@ -1,5 +1,166 @@
 <html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <link rel="icon" href="https://i.pinimg.com/originals/57/62/eb/5762eb3f605270d609679da595d6a105.jpg">
+    
+   <link rel="stylesheet" href="teamStyle.css">
+    
+  <title>2010 LA Lakers</title>
+</head>
+<body>
   
+  <div class="header">
+  <h2> '10</h2>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li><a href="ticket.html"> Tickets</a></li>
+      <li><a href="schedule.html"> Schedule</a></li>
+      <li><a href="roster.html"> Roster</a></li>
+      <li><a href="store.html"> Store</a></li>
+      <li><a href="../index.html"> About Me </a></li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <center>
+    <h1>The Los Angeles Lakers</h1>
+    <p>Home of the Reigning  Back to Back NBA Champions</p>
+      
+ <img src="https://img.pngio.com/index-of-wp-content-uploads-2018-12-la-lakers-png-500_185.png" class=responsive>
+      
+      <h3>'49 '50 '52 '53 '54 '72 '80 '82 '85 '87 '88 '00 '01 '02 '09 '10 </h3>
+    </center>
+    
+    
+    <div class="absolute">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Los_Angeles_Lakers_Wordmark_Logo_2001-current.png" width="325">
+</div>
+    
+  </div>
+  
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>Recent Scores</h2>
+      <h2>Game 7 - Jun 17, 2010</h2>
+      <p>83-79 (LAL wins 2010 NBA Finals 4-3)</p>
+      <h2>Game 6 - Jun 15, 2010</h2>
+      <p>89-67 (LAL)</p>
+      <h2> Game 5 - Jun 13, 2010</h2>
+      <p>92-86 (BOS) </p>
+    </div>
+  </div>
+</div>
+  
+ <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <center>
+  <img src="https://images.daznservices.com/di/library/NBA_Global_CMS_image_storage/60/84/2010-nba-champions-the-los-angeles-lakers_1si3ty2iqay871j6k7vc4muirx.jpeg?t=-1114086638&quality=80" style="width:100% height: auto" class="responsive">
+  </center>
+  <div class="text"> The 2010 NBA Champions</div>
+</div>
+
+      
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <center>
+  <img src="https://static.reuters.com/resources/r/?m=02&d=20100618&t=2&i=132896691&r=img-2010-06-18T112649Z_01_NOOTR_RTRMDNC_0_India-494191-1&w=800" style="width:100% height: auto" class="responsive">
+     </center>
+  <div class="text"> Kobe Bryant - 2010 Finals MVP</div>
+</div>
+
+<div class="mySlides fade">
+  
+  <div class="numbertext">3 / 4</div>
+  <center>
+  <img src="https://cdn.theathletic.com/app/uploads/2020/04/02114758/gettyimages-101605582-594x594-1.jpg" style="width:100% height: auto" class="responsive">
+     </center>
+  <div class="text">Pau Gasol's presence in the paint was crucial for the Laker's success</div>
+</div>
+     
+      
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <center>
+  <img src="https://lakersfanclubukhome.files.wordpress.com/2019/12/lakers_original.jpg" style="width:100% height: auto" class="responsive">
+     </center>
+  <div class="text">Laker's Starting 5</div>
+</div>
+     
+      
+ 
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+      
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span>  
+</div>
+
+     
+     
+     
+     
+    </div> 
+
+  
+  
+  
+  
+
+<div class="footer">
+</div>
+  
+  
+ <script> 
+ var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+} 
+  
+  
+  
+  </script>
+</body>
   
   
   
