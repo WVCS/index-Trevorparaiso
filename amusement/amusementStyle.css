@@ -1,1 +1,138 @@
 
+body{
+  background-color: turquoise;
+}
+
+h1{
+  color: orange;
+  text-shadow: 1px 1px teal;
+  border-style: outset;
+  background-color:white;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul.nav{
+  float: left;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  
+}
+
+li.nav{
+  display: inline;
+  padding: 10px;
+
+}
+a{
+  color: orange;
+   text-shadow: 1px 1px teal;
+   text-decoration: none;
+}
+
+li a:hover{
+  background-color: gold;
+  font-size: 105%;
+}
+
+/*credit to https://codepen.io/priosoft/pen/dMryaY for the button design*/
+#top {
+ 
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+ padding: 1.2em 2.8em;
+  border-color: orange;
+  color: white;
+  box-shadow: 0 0 40px 40px orange inset, 0 0 0 0 orange;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#top:hover {
+  box-shadow: 0 0 10px 0 orange inset, 0 0 10px 4px orange;
+color: teal;
+}
+  
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  flex: 48%;
+  max-width: 50%;
+  padding: 0 2px;
+}
+
+
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+  
+
+td, th {
+  border: 1px solid teal;
+  text-align: left;
+  padding: 8px;
+}
+
+  th{
+    color: orange;
+    background-color: white;
+  }
+
+
+td:hover{
+  background-color:orange;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+		background-color: orange;
+		color: #444;
+  width: 50%;
+	}
+
+	.box {
+		background-color: teal;
+		color: #fff;
+		border-radius: 5px;
+		padding: 20px;
+		font-size: 100%;
+
+	}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
