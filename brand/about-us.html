@@ -1,1 +1,369 @@
+<html>
+  
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about us</title>
+     <link rel="icon" href="uhdidas-logo.png">
+    
+    <style>
+      
+    body{
+  background-color: #ced4da;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
 
+h1{
+  text-align: center;
+  text-shadow: 1px 2px slategray;
+}
+
+h2, h3{
+  text-shadow: 1px 1px slategray;
+}
+
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+   width: 75%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/*credit to https://codepen.io/priosoft/pen/dMryaY for the button design*/
+#top {
+ 
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+ padding: 1.2em 2.8em;
+  border-color: #000103;
+  color: white;
+  box-shadow: 0 0 40px 40px #000103 inset, 0 0 0 0 #000103;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#top:hover {
+  box-shadow: 0 0 10px 0 #000103 inset, 0 0 10px 4px #000103;
+color: #000103;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  -ms-flex: 50%; 
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+  background-color: #e5e5e5;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+    
+    
+    </style>
+    
+</head>
+  
+  <body>
+   <div id="entireDiv">
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete">
+    <input id="myInput" type="text" name="myCountry" placeholder="Search...">
+  </div>
+</form>
+  <div>
+  
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="home.html">home</a>
+    <a href="products.html">products</a>
+  </div>
+</div>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+    
+    <h1> about us</h1>
+    <div class="row"> 
+  <div class="column">
+    <img src="https://www.adidas-group.com/media/filer_public_download/ea/52/ea5251fb-0593-4ecc-b2e4-811293c459fe/adidas_archive_07700.jpg" width="100%"> <center><h3> Vincenzo Uhdidas </h3></center>
+  </div>
+  <div class="column">
+    <h2> Our History</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat id porta nibh venenatis cras sed felis eget velit. Lobortis mattis aliquam faucibus purus. Neque sodales ut etiam sit amet nisl purus in mollis. Malesuada pellentesque elit eget gravida cum. Sed ullamcorper morbi tincidunt ornare massa eget. Amet massa vitae tortor condimentum lacinia quis vel eros. Felis bibendum ut tristique et egestas quis. Ultrices vitae auctor eu augue. Pellentesque habitant morbi tristique senectus.</p>
+
+  <p>Egestas purus viverra accumsan in nisl nisi scelerisque eu. Nulla porttitor massa id neque aliquam vestibulum morbi blandit. Ornare arcu dui vivamus arcu felis bibendum. Aliquam nulla facilisi cras fermentum odio eu. Posuere ac ut consequat semper viverra nam libero. A erat nam at lectus urna duis. Platea dictumst quisque sagittis purus sit amet. Sollicitudin tempor id eu nisl nunc. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Eget gravida cum sociis natoque. Sagittis vitae et leo duis ut diam quam nulla porttitor. Diam phasellus vestibulum lorem sed risus ultricies tristique. Blandit cursus risus at ultrices mi tempus.</p>
+
+<p>  Viverra adipiscing at in tellus integer feugiat. At varius vel pharetra vel turpis. Ante in nibh mauris cursus mattis molestie a iaculis. Dictumst quisque sagittis purus sit. Dictumst quisque sagittis purus sit amet. Dolor sed viverra ipsum nunc aliquet bibendum. Posuere ac ut consequat semper viverra nam. Consequat ac felis donec et. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Mauris rhoncus aenean vel elit scelerisque mauris. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Aenean sed adipiscing diam donec. Massa sed elementum tempus egestas sed. Ultrices tincidunt arcu non sodales neque sodales.Placerat vestibulum lectus mauris ultrices eros in cursus turpis. Vestibulum morbi blandit cursus risus at ultrices mi. Eros donec ac odio tempor orci dapibus ultrices in. </p>
+      <p>Semper feugiat nibh sed pulvinar proin. Tincidunt arcu non sodales neque sodales ut etiam sit. Eu nisl nunc mi ipsum faucibus vitae aliquet. In tellus integer feugiat scelerisque varius morbi enim nunc. Sem et tortor consequat id porta nibh. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Amet cursus sit amet dictum. Arcu bibendum at varius vel pharetra vel turpis nunc. Gravida arcu ac tortor dignissim convallis aenean et tortor. In eu mi bibendum neque egestas congue quisque. Tortor vitae purus faucibus ornare suspendisse sed nisi. Est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Tristique senectus et netus et malesuada fames ac turpis. Urna condimentum mattis pellentesque id nibh tortor id.</p>
+  </div>  
+  
+</div>
+    
+     <button onclick="backtoTOP()" id="top"> TOP</button>
+  
+    
+   <script>
+     function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["Shoes", "Shorts", "Shirts", "Pants", "Hats", "Jerseys", "Cleats", "8", "9", "10", "11", "12",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+
+function backtoTOP(){
+document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {hidefunction();}
+
+function hideFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+ document.getElementById("top").style.display = "block";
+  
+  else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+
+     
+    </script>
+     
+    
+    
+    
+</body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</html>
