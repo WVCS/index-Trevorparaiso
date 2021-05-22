@@ -1,5 +1,10 @@
 <html>
   <head>
+    
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title> uhdidas </title>
     <link rel="stylesheet" href="brandStyle.css">
     <link rel="icon" href="uhdidas-logo.png">
@@ -7,13 +12,169 @@
   
   <body>
   
+   <div id="entireDiv">
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete">
+    <input id="myInput" type="text" name="myCountry" placeholder="Search...">
+  </div>
+</form>
+  <div>
+  
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href=""../index.html"">home</a>
+    <a href="products.html">products</a>
+    <a href="about-us.html">about us</a>
+  </div>
+</div>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    
+    <center>
+  <img src="uhdidas-logo.png">
+  </center>
+    
+    <br>
+    <br>
+    <br>
+    
+ <div class="wrapper">
+    <div class="box d"><img src="https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy/f0c692cd57a34867994eac3601244435_9366/adidas-sportswear-3-stripes-hooded-track-top.jpg" width="100%" height="auto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </div>
+   <div class="box a"><img src="http://sc04.alicdn.com/kf/HTB100Zhd8Cw3KVjSZR0q6zcUpXa0.jpg" width="100%">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga</div>
+  <div class="box f"><img src="https://i.pinimg.com/originals/e2/78/d2/e278d24e7782595ffca8ae99b02b3b44.jpg" width="100%" >Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </div>
+</div>
+     
+   </div> 
+    
+    
+    
+    
+    
+
+ <button onclick="backtoTOP()" id="top"> TOP</button>
+    
   
   
   
+  <script>
+ function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["Shoes", "Shorts", "Shirts", "Pants", "Hats", "Jerseys", "Cleats", "8", "9", "10", "11", "12",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+
+function backtoTOP(){
+document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {hidefunction();}
+
+function hideFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+ document.getElementById("top").style.display = "block";
+  
+  else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+
+window.alert("Unfortunately public access to all Uhdidas stores is denied due to covid-19, however all of our online stores are fully operational. ")   
+    
+    
+    
+    
+     </script>
   
   
-  
-  
-  
+     </body>
   
 </html>
