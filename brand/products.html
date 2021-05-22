@@ -1,1 +1,580 @@
+<html>
+  
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>products</title>
+    <link rel="icon" href="uhdidas-logo.png">
+</head>
+  
+  <style>
+    body{
+  background-color: #ced4da;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+h1{
+  text-align: center;
+  text-shadow: 1px 2px slategray;
+}
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.cart{
+  float:right;
+}
+
+.cart:hover{
+width:101px;
+  height:101px;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+   width: 75%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+
+
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/*credit to https://codepen.io/priosoft/pen/dMryaY for the button design*/
+#top {
+ 
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+ padding: 1.2em 2.8em;
+  border-color: #000103;
+  color: white;
+  box-shadow: 0 0 40px 40px #000103 inset, 0 0 0 0 #000103;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#top:hover {
+  box-shadow: 0 0 10px 0 #000103 inset, 0 0 10px 4px #000103;
+color: #000103;
+}
+
+
+
+
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #495057
+ ;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+
+
+.row::after {
+  content: "";
+  clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+  
+    
+    
+    
+    
+  </style>
+  
+  <body>
+  
+  <img class="cart" src="https://static.thenounproject.com/png/229729-200.png" width="100px" height="100px">
+  
+  <div id="entireDiv">
+<form autocomplete="off" action="/action_page.php">
+  <div class="autocomplete">
+    <input id="myInput" type="text" name="myCountry" placeholder="Search...">
+  </div>
+</form>
+  <div>
+  
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="home.html">home</a>
+    <a href="about-us.html">about us</a>
+  </div>
+</div>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+    <h1> clothing & accessories</h1>
+    
+   <center>
+   <div class="row">
+  <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://media.endclothing.com/media/f_auto,w_600,h_600/prodmedia/media/catalog/product/1/1/11-12-2019_adidas_essentialhoody_black_fm9956_jd_1x.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Mens Black Hoodie</h1> 
+      <p>Sizes: S, M, L, XL</p> 
+      <p>$50</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+     
+  <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+            <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/02c10878454449a6a62aab09013c0c1f_9366/Ultraboost_20_Shoes_Black_EG0714_010_hover_standard.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Womens Running Shoes</h1> 
+      <p>Shoe Sizes: 5 - 10.5</p> 
+      <p>$90</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+     
+  <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/31453a4ebf704eda8dc6ab1200386f74_9366/Adizero_New_Reign_Cleats_White_EH2724_010_hover_standard.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Mens Cleats</h1> 
+      <p>Shoe Sizes:7 - 12.5</p> 
+      <p>$110</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+     </center>
+     
+    <center>
+    <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/aed47c513289472c9ba5abac010bb138_9366/Own_the_Run_Shorts_Black_FS9807_21_model.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Mens Shorts</h1> 
+      <p>Sizes: S, M, L, XL</p> 
+      <p>$35</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+    
+    <center>
+    <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4ef00108370b4dfcaa32a930014c4616_9366/3-Stripes_Tee_White_DV2901_01_laydown.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Mens T-Shirt</h1> 
+      <p>Sizes: S, M, L, XL</p> 
+      <p>$35</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+  
+    <center>
+  <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/3242fc9c36b644e8a5beac8400c2100d_9366/Adicolor_Classics_3-Stripes_Tights_Black_GN4504_21_model.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Womens Leggings</h1> 
+      <p>Sizes: XS, S, M, L, XL</p> 
+      <p>$40</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+  </center>
+  
+  <center>
+  <div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://kickz.akamaized.net/no/media/images/p/600/adidas_performance-Harden_Vol__4_x_Star_Wars-core_black_active_purple_gold_met_-1.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Mens Basketball Shoes</h1> 
+      <p>Shoe Sizes:7 - 14.5</p> 
+      <p>$130</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/a5458fc1327f4fed884dac6301216752_9366/adidas_Sportswear_3-Stripes_Sweat_Pants_Black_GM6462_21_model.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Mens Sweatpants</h1> 
+      <p>Sizes: S, M, L, XL</p> 
+      <p>$40</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="column">
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://www.natterjacks.com/images/adidas-originals-trefoil-cap-p90958-188929_image.jpg"  style="width:100%">
+    </div>
+    <div class="flip-card-back">
+      <h1>Uhdidas Hat</h1> 
+      <p>Sizes: M, L</p> 
+      <p>$25</p>
+      <button onclick="myFunction()">Add to Cart</button>
+
+<p id="demo"></p>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+
+</center>
+
+  
+  <button onclick="backtoTOP()" id="top"> TOP</button>
+  
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["Shoes", "Shorts", "Shirts", "Sweatpants", "Hats", "Basketball Shoes", "Cleats", "Leggings", "Hoodies", "10", "11", "12",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+
+function backtoTOP(){
+document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {hidefunction();}
+
+function hideFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+ document.getElementById("top").style.display = "block";
+  
+  else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+
+function myFunction() {
+  var txt;
+  if (confirm("Would you like to add this item to cart?")) {
+    txt = "Added item to cart";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+
+        </script>
+
+
+
+
+
+
+
+</body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</html>
