@@ -1,41 +1,166 @@
-<html>
-
+<html lang="en">
 <head>
-<title> KANYE WEST </title>
-  <link rel="icon" href="https://i.pinimg.com/originals/fe/7a/2f/fe7a2ff2e3b57b681f667d604e3c8f2c.jpg">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanye West</title>
   
-  <link rel="stylesheet" href="style.css">
+  <style>
+    h1{
+  color: white;
+  text-shadow: 1px 1px teal;
+  border-style: outset;
+  background-color: cadetblue;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+ul.nav{
+  float: left;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  
+}
+
+li.nav{
+  display: inline;
+  padding: 10px;
+
+}
+a{
+  color: white;
+   text-shadow: 1px 1px teal;
+   text-decoration: none;
+}
+
+li a:hover{
+  color:  black;
+   text-shadow: 1px 1px white;
+  font-size: 105%;
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+body {
+ background-color: burlywood; 
+}
+table, th, td{
+   border: 3px solid black;
+  background-color: cadetblue;
+  text-shadow: 1px 1px black;
+  color: white;
+}
+}
+table {
+  width: 50%;
+}
+dl {
+  background-color: cadetblue;
+}
+dt{
+  color: black;
+  text-shadow: 1px 1px white;
+  font-size: 25px;
+}
+dd{
+  color: white;
+text-shadow: 1px 1px black;
+  font-size: 20px;
+}
+
+
+
+#top {
+ 
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+ padding: 1.0em 2.5em;
+  border-color: cadetblue;
+  color: white;
+  box-shadow: 0 0 40px 40px cadetblue inset, 0 0 0 0 cadetblue;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#top:hover {
+  box-shadow: 0 0 10px 0 cadetblue inset, 0 0 10px 4px cadetblue;
+color: cadetblue;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  }
+}
+
+
+  </style>
+  
+  
+  
 </head>
-  
-  
-  
 <body>
-  <ul class="nav">
-  <li class="nav" ><a href="index.html"> About Me</a></li>
-  <li class="nav"><a href="kanye.html"> Kanye West </a></li>
-  <li class="nav"><a href="convince/home.html"> Convince </a></li>
-  <li class="nav"><a href="food/home.html"> Food </a></li>   
-</ul>
-  <br>
-    <br>
-    <br>
-
-
-  <center>
-    
-  <h1> Kanye Omari West </h1>
+  <h1> <ul class="nav">
+    <li class="nav" ><a href="../index.html"> Home </a></li></ul>Kanye Omari West</h1>
   
- <img src="https://media.wired.com/photos/5927395ecefba457b079c784/4:3/w_929,h_697,c_limit/KanyeWest-486031482.jpg" width="550" height="400">
-   
-  <img src="https://dazedimg-dazedgroup.netdna-ssl.com/2000/azure/dazed-prod/1170/9/1179530.jpg" width="550" height="400">
-   
-  </center>
-
-  <hr>
+   <button onclick="backtoTOP()" id="top"> TOP</button>
   
-  <center>
+ <div class="row">
+  <div class="column">
+ <img src="https://media.wired.com/photos/5927395ecefba457b079c784/4:3/w_929,h_697,c_limit/KanyeWest-486031482.jpg" width="100%" >
+  </div>
+  <div class="column">
+  <img src="https://i.redd.it/kcfioitb0f541.png" width="100%" >
+  </div>
+  <div class="column">
+  <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F-0001%2F11%2F30%2Fkim-kardashian-2.jpg" width="100%">
+  </div>
+  <div class="column">
+ <img src="https://dazedimg-dazedgroup.netdna-ssl.com/2000/azure/dazed-prod/1170/9/1179530.jpg" width="100%">
+  </div>
+</div>
+  
+ <hr>
+<center>
+   
 <div class="row">
-  <div class="column" style="background-color:burlywood;">
+  <div style="background-color:burlywood;">
      <table>
     <tr>
       <th> Album </th>
@@ -86,85 +211,54 @@
                             <td> GOOD & Def Jam </td>
                             <td> 2019 </td>
    </table>
-   
-  </div>
-  <div class="column" style="background-color:cadetblue;">
-   <dl>
-  <dt>Birth Date</dt>
-  <dd>June 8, 1977 (43 y/o)</dd>
-  <dt>Childhood</dt>
-  <dd>Born in Atlanta, GA and raised in Chicago, IL</dd>
-     <dt>Family</dt>
-  <dd>Kim Kardashian (wife), North West, Saint West, Chicago West, Psalm West </dd>
-    <dt>Accolades</dt>
-  <dd>21 Grammys</dd>
-    <dt>Best Selling Album</dt>
-  <dd>The College Dropout</dd>
-  <dt>Most Popular Song</dt>
-  <dd>Gold Digger ft. Jamie Foxx</dd>
-</dl> 
-  </div>
-</div>
-  
-</center>
-  
+  </div> 
 <hr>
-  <center>
- <img src="https://i.redd.it/kcfioitb0f541.png" width="500">
+     <table>
+     
+     <tr> 
+        <td> Birth Date </td>
+        <td> June 8, 1977 (43 y/o) </td>
+        <tr>
+          <td> Childhood</td>
+          <td> Born in Atlanta, GA and raised in Chicago, IL</td>
+          <tr>
+            <td> Family</td>
+          <td> Kim Kardashian (wife), North West, Saint West, Chicago West, Psalm West</td>
+          <tr>
+            <td> Accolades</td>
+          <td>22 Grammys </td>
+          <tr>
+            <td> Best Selling Album</td>
+          <td>The College Dropout </td>
+          <tr>
+            <td>Most Popular Song </td>
+          <td> Gold Digger ft. Jamie Foxx</td>
+          <tr>
+          
+  </table>
+       </center>
+
+    
+<script>
+  function backtoTOP(){
+document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {hidefunction();}
+
+function hideFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+ document.getElementById("top").style.display = "block";
   
-  <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F-0001%2F11%2F30%2Fkim-kardashian-2.jpg" width="600" height="500">
-  </center>
-   
+  else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+
+
+  </script>
+  
  
+  
 </body>
-  
- 
-  
-<style>
-h1 {
-  background-color: cadetblue;
-  color: white;
-}
-body {
- background-color: burlywood; 
-}
-table, th, td{
-   border: 3px solid black;
-  background-color: cadetblue;
-  color: white;
-}
-}
-table {
-  width: 50%;
-}
-dl {
-  background-color: cadetblue;
-}
-dt{
-  color: black;
-  font-size: 25px;
-}
-dd{
-  color: white;
-    font-size: 20px;
-}
- 
- .column {
-  display: table;
-  width: 675px;
-  height: 400px;
-}
-
-.row{
-  display: flex;  
-}
-  
-</style>
-
-
-
-
-
-
-
 </html>
