@@ -1,1 +1,244 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team</title>
+      <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxJ26J5jl2VCQGFpXzq39OuWgbdxBx8EteN9dt2ZBcMaaZ90nLJgps2i0pRyHEyt6ejNFE5TaTMpk2Uo5bg:https://cdn.worldvectorlogo.com/logos/clown-1.svg&usqp=CAU">
+<style>
+    body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffea73;
+}
 
+h1{ color: #800e13;
+  text-shadow: 1px 1px #ad2831;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #800e13;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ffea73;
+  color: black;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: white;
+  color: black;
+}
+
+
+.flip-box-back {
+  background-color:  #800e13;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.flip-boxn {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+.flip-box-innern {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-boxn:hover .flip-box-innern {
+  transform: rotateX(180deg);
+}
+
+.flip-box-frontn, .flip-box-backn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-frontn {
+  background-color: black;
+  color: black;
+}
+
+.flip-box-backn {
+  background-color: #800e13;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  }
+}
+
+    </style>
+</head
+    
+<body>
+    
+     <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">Food</a></li>
+  <li style="float:right"><a href="#about">Join</a></li>
+</ul> 
+  <br>
+  <h1> Meet the Team</h1>
+  <br>
+     <div class="row">
+  <div class="column">
+  <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://gallery.kissclipart.com/20181009/alq/kissclipart-ringmaster-head-clipart-ringmaster-royalty-free-dcd500b8b7d2d9d6.jpg" height="100%">
+    </div>
+    <div class="flip-box-back">
+      <h2>Ringmaster</h2>
+      <p> Tina Ziegler </p>
+    </div>
+  </div>
+</div>
+     </div>
+  
+    <div class="column">
+  <div class="flip-boxn">
+  <div class="flip-box-innern">
+    <div class="flip-box-frontn">
+<img src="https://thumbs.dreamstime.com/b/fire-breather-29089225.jpg" height="100%">
+    </div>
+    <div class="flip-box-backn">
+      <h2>Tightrope Walker</h2>
+      <p> Mr. Glover</p>
+    </div>
+  </div>
+</div>
+       </div>
+
+      <div class="column">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+<img src="https://previews.123rf.com/images/lezhepyoka/lezhepyoka1805/lezhepyoka180500010/101213613-circus-female-juggler-on-a-unicycle-isolated-on-white-background-vector-illustration.jpg" height="100%">
+    </div>
+    <div class="flip-box-back">
+      <h2>Juggler</h2>
+      <p> Mrs. Heard</p>
+    </div>
+  </div>
+</div>
+         </div>
+
+        
+        <div class="column">
+  <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+<img src="https://cdn4.vectorstock.com/i/thumb-large/99/78/man-circus-ropewalker-color-sketch-engraving-vector-24189978.jpg" height="100%">
+    </div>
+    <div class="flip-box-back">
+      <h2>Tightrope Walker</h2>
+      <p> Mr. Glover</p>
+    </div>
+  </div>
+</div>
+           </div>
+       
+  </div>
+  
+  
+  
+</body>
+</html>
+    
+    
+    
+    
