@@ -1,1 +1,393 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circus View</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxJ26J5jl2VCQGFpXzq39OuWgbdxBx8EteN9dt2ZBcMaaZ90nLJgps2i0pRyHEyt6ejNFE5TaTMpk2Uo5bg:https://cdn.worldvectorlogo.com/logos/clown-1.svg&usqp=CAU">
 
+  <style>
+  body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffea73;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 5px solid #ad2831; 
+}
+
+h2{
+  color: #800e13;
+  text-shadow: 1px 1px #ad2831;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://oddslifenetstorage.blob.core.windows.net/casinobeats/2019/10/shutterstock_176799053-e1571229509772.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #800e13;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ffea73;
+  color: black;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+		grid-template-columns: 33% 33% 33%;
+		color: #444;
+	}
+
+	.box {
+		background-color: #ad2831;
+		color: black;
+		border-radius: 5px;
+		padding: 20px;
+		font-size: 100%;
+
+	}
+
+.box:hover{
+  color: white;
+}
+}
+
+
+	.a {
+		grid-area: 1 / 2 / 2 / 3;
+	}
+	.b {
+		grid-area: 2 / 2 / 3 / 3;
+	}
+	.c {
+		grid-area: 2 / 3 / 3 / 4;
+	}
+
+#top {
+ 
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+ padding: 1.0em 1.5em;
+  border-color: #ad2831;
+  color: white;
+  box-shadow: 0 0 40px 40px #ad2831 inset, 0 0 0 0 #ad2831;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#top:hover {
+  box-shadow: 0 0 10px 0 #ad2831 inset, 0 0 10px 4px#ad2831;
+color: #000103;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+
+
+
+.pricing-table__wrapper {
+  position: relative;
+  padding-top: 300px;
+}
+
+.pricing-cards {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 360px;
+  margin: 20px;
+  background-color: #faf9ff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(40, 25, 114, 0.1);
+  transition: all 0.3s;
+}
+
+.card .card-pricing__header {
+  padding: 40px 10px;
+  border-bottom: 1px solid #800e13;
+}
+
+.card .card-pricing__header h4 {
+  margin-bottom: 5px;
+  color: #1d2441;
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.card .card-pricing__header p {
+  margin-bottom: 27px;
+  color: #800e13;
+  font-size: 16px;
+}
+
+.card-pricing__price {
+  font-size: 60px;
+}
+
+.card-pricing__price span {
+  margin-right: 3px;
+  font-size: 40px;
+  position: relative;
+  bottom: 5px;
+  vertical-align: middle;
+}
+
+.card-pricing__list {
+  padding: 30px 8px;
+  list-style: none;
+  border-bottom: 1px solid #800e13;
+}
+
+
+
+.card-pricing__footer {
+  padding: 45px 0;
+}
+
+.card-pricing__footer .button {
+  padding: 15px 30px;
+  color: #1e1859;
+  background: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid #dbd9e6;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+.card:hover {
+  background: #ffffff;
+  box-shadow: 0 20px 25px 5px rgba(33, 20, 106, 0.1);
+}
+
+.card:hover .card-pricing__header h4,
+.card:hover .card-pricing__header p,
+.card:hover .card-pricing__price {
+  color: #800e13;
+}
+
+.card:hover .card-pricing__footer .button {
+  color: #faf9ff;
+  background: linear-gradient(to right, #ad2831 0%, #800e13 100%);
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .pricing-table__wrapper {
+    padding-top: 0px;
+  }
+
+  .pricing-cards {
+    position: static;
+  }
+}
+  
+  </style>
+</head>
+
+<body>
+
+   
+  <div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">Circus View</h1>
+    <p>13500 Wolverine Way</p>
+  </div>
+</div>
+  
+ <ul>
+  <li><a href="#home">Meet the Team</a></li>
+  <li><a href="#news">Food</a></li>
+  <li><a href="#prices">Prices</a></li>
+  <li style="float:right"><a href="#about">Join</a></li>
+</ul> 
+  <br>
+  
+  <div class="center">
+  <p> "Best. Show. Ever. Quite a circus, and I've seen them all" - Ms. Neumann
+
+</p>
+</div>
+  
+  
+  
+  <br>
+  
+ 
+  
+  <h2> Activities </h2>
+  
+  <div class="wrapper">
+    <div class="box d"><img src="https://www.magicandballoons.com/wp-content/uploads/2018/06/circus-acts.jpg" width="100%" height="auto">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. </div>
+   <div class="box a"><img src="https://www.telegraph.co.uk/content/dam/news/2020/09/29/TELEMMGLPICT000239826220_trans_NvBQzQNjv4Bq39_qbwOGg3d8YmUGgFRog1AzN3ccDmEUclrH5zBgMR8.jpeg?imwidth=480" width="100%">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</div>
+  <div class="box f"><img src="https://www.thesun.co.uk/wp-content/uploads/2020/09/227fb73d-9870-4b18-94f0-3864abef4c7c.jpg" width="100%" >Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </div>
+</div>
+     
+   </div> 
+    
+  
+  <br>
+  <br>
+  <br>
+  
+  <h2 id="prices"> Pricing Packages </h2>
+    <div class="container">
+       
+        </div>
+        <div class="pricing-table__wrapper">
+          <div class="pricing-cards">
+            <div class="row">
+              <div class="card">
+                <div class="card-pricing__header">
+                  <h4>At the Door</h4>
+                  
+                  <h1 class="card-pricing__price"><span>$</span>30.00</h1>
+                </div>
+               
+                  
+                <div class="card-pricing__footer">
+                 
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-pricing__header">
+                  <h4>In Advance</h4>
+                 
+                  <h1 class="card-pricing__price"><span>$</span>18.00</h1>
+                </div>
+                
+                <div class="card-pricing__footer">
+                  <button class="button">Select Plan</button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-pricing__header">
+                  <h4>Kids (Under 10)</h4>
+                  
+                  <h1 class="card-pricing__price"><span>$</span>5.00</h1>
+                </div>
+               
+                <div class="card-pricing__footer">
+                  <button class="button">Select Plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+ <button onclick="backtoTOP()" id="top"> ^</button>
+  
+
+<script>
+function backtoTOP(){
+document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {hidefunction();}
+
+function hideFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+ document.getElementById("top").style.display = "block";
+  
+  else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+
+
+
+</script>
+  
+</body>
+</html>
