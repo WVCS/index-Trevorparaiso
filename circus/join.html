@@ -1,1 +1,159 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join</title>
+   <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdxJ26J5jl2VCQGFpXzq39OuWgbdxBx8EteN9dt2ZBcMaaZ90nLJgps2i0pRyHEyt6ejNFE5TaTMpk2Uo5bg:https://cdn.worldvectorlogo.com/logos/clown-1.svg&usqp=CAU">
+   
+    
+    <style>
+    body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffea73;
+}
 
+form {
+  border: 3px solid #f1f1f1;
+}
+
+.container {
+  padding: 20px;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #800e13;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.9;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #800e13;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #ffea73;
+  color: black;
+}
+
+#top {
+ 
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+ padding: 1.0em 1.5em;
+  border-color: #ad2831;
+  color: white;
+  box-shadow: 0 0 40px 40px #ad2831 inset, 0 0 0 0 #ad2831;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+#top:hover {
+  box-shadow: 0 0 10px 0 #ad2831 inset, 0 0 10px 4px#ad2831;
+color: #000103;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+    
+    </stye>
+</head>
+<body>
+
+      
+   <ul>
+     <li><a href="home.html">Home</a></li>
+  <li><a href="meet the team.html">Meet the Team</a></li>
+  <li><a href="menu.html">Food</a></li>
+</ul> 
+  
+  <form action="/action_page.php">
+  <div class="container">
+    <h2>Join our Mailing List</h2>
+    <p>Sign up to recieve notifications about everything Circus View, such as the latest news and promotions. </p>
+  </div>
+
+  <div class="container" style="background-color:white">
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+  
+  
+   <button onclick="backtoTOP()" id="top"> ^</button>
+  
+      <script>
+  function backtoTOP(){
+document.body.scrollTop = 0; document.documentElement.scrollTop = 0;
+}
+
+window.onscroll = function() {hidefunction();}
+
+function hideFunction() {
+  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+ document.getElementById("top").style.display = "block";
+  
+  else{
+    document.getElementById("top").style.display = "none";
+  }
+}
+  </script>
+</body>
+</html>    
+      
+      
+      
+      
+      
